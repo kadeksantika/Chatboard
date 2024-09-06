@@ -108,21 +108,21 @@ $(document).ready(function () {
                 $('#menu-item-2').removeClass("active");
                 $('#menu-item-3').removeClass("active");
                 room = "Adventure";
-                logoSrc = '../ChatBoard/src/images/camping.png';
+                logoSrc = 'src/images/camping.png';
                 break;
             case 2:
                 $('#menu-item-1').removeClass("active");
                 $('#menu-item-2').addClass("active");
                 $('#menu-item-3').removeClass("active");
                 room = "Game";
-                logoSrc = '../ChatBoard/src/images/console-controller.png';
+                logoSrc = 'src/images/console-controller.png';
                 break;
             case 3:
                 $('#menu-item-1').removeClass("active");
                 $('#menu-item-2').removeClass("active");
                 $('#menu-item-3').addClass("active");
                 room = "Study";
-                logoSrc = '../ChatBoard/src/images/diary-bookmark-down.png';
+                logoSrc = 'src/images/diary-bookmark-down.png';
                 break;
         }
         $('#room-name').text(room);
