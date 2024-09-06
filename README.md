@@ -1,6 +1,6 @@
 # LSPTIK Junior Web Programmer Certification Practice: Chatboard
 
-This project is a simple chatboard application built for the **LSPTIK Junior Web Programmer Certification** practice. It demonstrates core web programming skills using **PHP**, **HTML**, and **CSS**, with the **Tailwind CSS** framework for styling.
+This project is a simple chatboard application built for the **LSPTIK Junior Web Programmer Certification** practice. It demonstrates core web programming skills using **PHP**, **HTML**,**JS**, and **CSS**, with the **Tailwind CSS** framework for styling.
 
 ## Features
 
