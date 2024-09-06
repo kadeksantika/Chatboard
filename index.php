@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="src/css/custom.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>ChatBoard</title>
+    <link rel="icon" href="src/images/comment.png" type="image/x-icon">
+
+</head>
+
+<body id="body" class="w-screen h-screen flex duration-500 overflow-hidden">
+    <div id="sidebar"
+        class="bg-teal-950 shadow-md z-50 flex items-start px-5 py-5 md:active duration-500 justify-between flex-col gap-10">
+        <div id="header-menu" class="flex justify-between items-center w-full">
+            <div id="logo" class="flex gap-4 items-center">
+                <img id="logo-img" src="src/images/comment.png" class="h-7" alt="">
+                <p id="logo-txt" class="text-white font-semibold text-lg">ChatBoard</p>
+            </div>
+            <button id="menu-toggle-btn" class="border-2 border-white rounded-full p-2">
+                <img class="h-3" src="src/images/bars-staggered.png" alt="">
+            </button>
+        </div>
+        <div id="menu" class="w-full flex flex-col gap-3 h-full">
+            <div id="menu-item-1"
+                class="menu-item active group flex justify-between text-white items-center bg-emerald-900/10 rounded-md hover:bg-emerald-900/50 duration-300 cursor-pointer">
+                <div id="menu-item-group-1" class="flex opacity-90 group-hover:opacity-100 items-center gap-3">
+                    <img class="h-7 border border-white rounded-full p-1" src="src/images/camping.png" alt="">
+                    <p class="menu-name">Adventure</p>
+                </div>
+                <img id="menu-item-img-1" class="opacity-50 group-hover:opacity-100 menu-arrow h-3"
+                    src="src/images/angle-right.png" alt="">
+            </div>
+            <div id="menu-item-2"
+                class="menu-item group flex justify-between text-white items-center bg-emerald-900/10 rounded-md hover:bg-emerald-900/50 duration-300 cursor-pointer">
+                <div id="menu-item-group-2" class="flex opacity-90 group-hover:opacity-100 items-center gap-3">
+                    <img class="h-7 border border-white rounded-full p-1" src="src/images/console-controller.png"
+                        alt="">
+                    <p class="menu-name">Game</p>
+                </div>
+                <img id="menu-item-img-2" class="opacity-50 group-hover:opacity-100 menu-arrow h-3"
+                    src="src/images/angle-right.png" alt="">
+            </div>
+            <div id="menu-item-3"
+                class="menu-item group flex justify-between text-white items-center bg-emerald-900/10 rounded-md hover:bg-emerald-900/50 duration-300 cursor-pointer">
+                <div id="menu-item-group-3" class="flex opacity-90 group-hover:opacity-100 items-center gap-3">
+                    <img class="h-7 border border-white rounded-full p-1" src="src/images/diary-bookmark-down.png"
+                        alt="">
+                    <p class="menu-name">Study</p>
+                </div>
+                <img id="menu-item-img-3" class="opacity-50 group-hover:opacity-100 menu-arrow h-3"
+                    src="src/images/angle-right.png" alt="">
+            </div>
+        </div>
+        <div>
+            <p class="text-white/20 text-xs flex gap-2 version"><span class="hidden md:block">Chatboard </span>V.000.1
+            </p>
+        </div>
+    </div>
+    <div id="chatboard" class="bg-slate-50 flex flex-col w-full h-full py-0 relative overflow-y-auto">
+        <div
+            class="flex md:flex-row flex-col justify-between text-slate-700 items-start md:items-center bg-white p-5 md:px-7 shadow-sm gap-2">
+            <div class="flex items-center gap-3">
+                <img id="room-logo" class="h-7 border invert opacity-70 border-slate rounded-full p-1"
+                    src="src/images/camping.png" alt="">
+                <p id="room-name" class="">Adventure</p>
+                <p id="room-avg" class="menu-name text-xs border-l flex items-center pl-2 italic"></p>
+            </div>
+            <div class="flex items-center gap-2">
+                <form id="form-search" class="p-2 py-[5px] border border-slate rounded-full flex items-center justify-between">
+                    <button class=""><img class="h-3 ml-3 invert opacity-70" src="src/images/search.png"
+                            alt=""></button>
+                    <input id="search-input" type="text" class=" bg-slate/0 outline-none px-3 text-sm w-20 focus:w-44 duration-300"
+                        placeholder="search...">
+                </form>
+                <div class="flex">
+                    <button id="sort-btn" class="p-2 border  border-slate rounded-full"><img id="sort-img" class="h-3 invert opacity-70"
+                            src="src/images/sort-amount-down-alt.png" alt=""></button>
+                    <input type="checkbox" id="customCheckbox" class="hidden">
+                </div>
+            </div>
+        </div>
+        
+        <div id="chat-container" class="h-full overflow-y-auto p-7 flex flex-col gap-5">
+           
+        </div>
+
+        <div class="w-full  flex items-center justify-center bg-white border border-gray-500/20">
+            <form id="form-chat" class="flex items-center justify-between w-full p-3 px-5 md:px-7 gap-5">
+                <input type="hidden" id="input-room" name="room" value="Adventure">
+                <button
+                    class="p-2 w-12 h-9 md:w-auto md:h-auto border border-slate-500 rounded-full flex items-center justify-center"
+                    type="reset">
+                    <img class="h-4 w-4 invert opacity-70" src="src/images/refresh.png" alt="">
+                </button>
+                <div class="w-full flex gap-2 flex-col md:flex-row">
+                    <input class="w-full md:w-1/3 bg-gray-500/10 p-2 px-5 rounded-md outline-none" type="text"
+                        placeholder="Your name..." name="name">
+                    <input class="w-full bg-gray-500/10 p-2 px-5 rounded-md outline-none" type="text"
+                        placeholder="Messages..." name="message">
+                </div>
+                <button type="submit"
+                    class="p-2 w-12 h-9 md:w-auto md:h-auto border border-slate-500 rounded-full flex items-center justify-center">
+                    <img class="h-4 w-4 aspect-square  invert opacity-70" src="src/images/paper-plane.png" alt="">
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="src/scripts/script.js"></script>
+</body>
+
+</html>

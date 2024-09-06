@@ -1,0 +1,142 @@
+#sidebar {
+    width: 80px;
+}
+
+#sidebar #logo-img {
+    display: block;
+}
+
+#sidebar #logo-txt {
+    display: none;
+}
+
+#sidebar #menu-toggle-btn {
+    display: none;
+}
+
+#sidebar #header-menu {
+    justify-content: center;
+}
+
+
+#sidebar .menu-name {
+    display: none;
+}
+
+#sidebar .menu-arrow {
+    display: none;
+}
+
+#sidebar .menu-item {
+    padding: 5px 0px;
+    justify-content: center;
+}
+
+
+
+@media (min-width: 601px) {
+    #sidebar #logo {
+        display: none;
+    }
+
+    #sidebar #logo-img {
+        display: none;
+    }
+
+    #sidebar #logo-txt {
+        display: none;
+    }
+
+    #sidebar.active {
+        width: 320px;
+    }
+
+    #sidebar .version span {
+        display: none;
+    }
+
+    #sidebar.active .version span {
+        display: block;
+    }
+
+    #sidebar #menu-toggle-btn {
+        display: block;
+    }
+
+
+    #sidebar.active #logo {
+        display: flex;
+    }
+
+    #sidebar.active #logo-img {
+        display: block;
+    }
+
+    #sidebar.active #logo-txt {
+        display: block;
+    }
+
+    #sidebar.active #header-menu {
+        justify-content: space-between;
+    }
+
+    #sidebar.active .menu-name {
+        display: block;
+    }
+
+    #sidebar.active .menu-arrow {
+        display: block;
+    }
+
+    #sidebar.active .menu-item {
+        padding: 10px 10px;
+        justify-content: space-between;
+    }
+
+
+
+}
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(41, 111, 92, 0.23);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #098965;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.scrollable-container {
+    height: 200px;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.menu-item {
+    background: #054a38;
+}
+
+.menu-item.active {
+    background: #043d2e;
+}
+
+#sort-btn.active{
+    background: #043d2e;
+}
+#sort-btn.active img{
+    filter: invert(0);
+}
