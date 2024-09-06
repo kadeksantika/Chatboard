@@ -72,6 +72,6 @@ if (file_exists($filename) && ($file = fopen($filename, 'r')) !== FALSE) {
     echo "<script>window.chatData = {averageCharCount: $averageCharCount};</script>";
 
 } else {
-    echo "Error: File does not exist or could not be opened.";
+    echo "There are no chat yet.";
 }
 ?>
